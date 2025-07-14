@@ -29,7 +29,7 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-# Убедитесь, что ваш db.py файл находится в той же директории
+
 from db import (
     init_db, update_user_username, get_user_role, get_all_users_with_roles,
     set_user_role, get_tickets_by_user_id, get_tickets_by_date_range,
