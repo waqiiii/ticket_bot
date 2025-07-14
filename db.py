@@ -11,6 +11,8 @@ DB_NAME = "tickets.db" # Имя файла базы данных SQLite
 SUPERADMIN_ID = 7963375756 # <--- ЗАМЕНИТЕ ЭТО НА ВАШ РЕАЛЬНЫЙ TELEGRAM ID
 
 # === Функции для работы с базой данных ===
+async def generate_tickets_excel(*args, **kwargs):
+    pass
 
 async def init_db():
     """Инициализирует базу данных: создает таблицы, если они не существуют."""
