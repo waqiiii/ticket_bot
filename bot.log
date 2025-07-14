@@ -1,0 +1,195 @@
+2025-07-11 16:54:36,569 - __main__ - ERROR - BOT_API_TOKEN не найден в переменных окружения. Убедитесь, что .env файл настроен.
+2025-07-11 17:06:51,744 - aiogram - INFO - Bot: TestMB [@bankservicebot_bot]
+2025-07-11 17:06:51,944 - aiogram - WARNING - Updates were skipped successfully.
+2025-07-11 17:06:52,028 - __main__ - INFO - Заголовки добавлены в Excel файл.
+2025-07-11 17:06:52,068 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-07-11 17:14:02,813 - __main__ - INFO - Заявка I-453898 добавлена в Excel файл.
+2025-07-11 17:14:02,831 - __main__ - INFO - Новая заявка I-453898 создана пользователем 1872880417. Обновлен Excel.
+2025-07-11 17:15:26,086 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-61' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:410> exception=AttributeError("'coroutine' object has no attribute 'lower'")>
+Traceback (most recent call last):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 418, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\bot.py", line 1880, in manage_roles_menu_cb
+    await c.message.edit_text(await get_text(user_id, "manage_roles") + ": " + await get_text(user_id, "select_user_for_role_change").lower().replace("выберите пользователя для изменения роли:", ""), reply_markup=kb, parse_mode="HTML")
+AttributeError: 'coroutine' object has no attribute 'lower'
+2025-07-11 17:16:25,118 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-77' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:410> exception=AttributeError("'coroutine' object has no attribute 'lower'")>
+Traceback (most recent call last):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 418, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\bot.py", line 1880, in manage_roles_menu_cb
+    await c.message.edit_text(await get_text(user_id, "manage_roles") + ": " + await get_text(user_id, "select_user_for_role_change").lower().replace("выберите пользователя для изменения роли:", ""), reply_markup=kb, parse_mode="HTML")
+AttributeError: 'coroutine' object has no attribute 'lower'
+2025-07-11 17:24:28,668 - aiogram.dispatcher.dispatcher - INFO - Stop polling...
+2025-07-11 17:24:28,675 - aiogram - WARNING - Goodbye!
+2025-07-11 17:24:37,811 - aiogram - INFO - Bot: TestMB [@bankservicebot_bot]
+2025-07-11 17:24:38,031 - aiogram - WARNING - Updates were skipped successfully.
+2025-07-11 17:24:38,077 - __main__ - INFO - Заголовки добавлены в Excel файл.
+2025-07-11 17:24:38,114 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-07-11 17:25:03,407 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-19' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:410> exception=TypeError("get_text() got multiple values for argument 'user_id'")>
+Traceback (most recent call last):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 418, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\bot.py", line 1904, in process_user_selection_for_role_cb
+    await c.message.edit_text(await get_text(user_id_requester, "select_new_role", user_id=user_id_to_manage, current_role=current_role or (await get_text(user_id_requester, 'no_history')).lower()), reply_markup=kb, parse_mode="HTML")
+TypeError: get_text() got multiple values for argument 'user_id'
+2025-07-11 17:28:45,715 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-22' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:410> exception=TypeError("get_text() got multiple values for argument 'user_id'")>
+Traceback (most recent call last):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 418, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 284, in process_update
+    return await self.callback_query_handlers.notify(update.callback_query)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\bot.py", line 1904, in process_user_selection_for_role_cb
+    await c.message.edit_text(await get_text(user_id_requester, "select_new_role", user_id=user_id_to_manage, current_role=current_role or (await get_text(user_id_requester, 'no_history')).lower()), reply_markup=kb, parse_mode="HTML")
+TypeError: get_text() got multiple values for argument 'user_id'
+2025-07-11 17:30:46,374 - aiogram.dispatcher.dispatcher - INFO - Stop polling...
+2025-07-11 17:30:46,375 - aiogram - WARNING - Goodbye!
+2025-07-11 17:30:53,923 - aiogram - INFO - Bot: TestMB [@bankservicebot_bot]
+2025-07-11 17:30:54,139 - aiogram - WARNING - Updates were skipped successfully.
+2025-07-11 17:30:54,199 - __main__ - INFO - Заголовки добавлены в Excel файл.
+2025-07-11 17:30:54,219 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-07-11 17:31:07,053 - __main__ - ERROR - Не удалось получить информацию о чате для пользователя ID 7963375756: no such column: username
+2025-07-11 17:31:28,499 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-25' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:410> exception=OperationalError('no such column: username')>
+Traceback (most recent call last):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 418, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\bot.py", line 697, in cmd_start
+    await update_user_username(m.from_user.id, m.from_user.username)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\db.py", line 268, in update_user_username
+    await db.execute(
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 183, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 122, in _execute
+    return await future
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 105, in run
+    result = function()
+sqlite3.OperationalError: no such column: username
+2025-07-11 17:31:33,356 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-28' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:410> exception=OperationalError('no such column: username')>
+Traceback (most recent call last):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 418, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\bot.py", line 697, in cmd_start
+    await update_user_username(m.from_user.id, m.from_user.username)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\db.py", line 268, in update_user_username
+    await db.execute(
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 183, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 122, in _execute
+    return await future
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 105, in run
+    result = function()
+sqlite3.OperationalError: no such column: username
+2025-07-11 17:31:37,390 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-31' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:410> exception=OperationalError('no such column: username')>
+Traceback (most recent call last):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 418, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\bot.py", line 697, in cmd_start
+    await update_user_username(m.from_user.id, m.from_user.username)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\db.py", line 268, in update_user_username
+    await db.execute(
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 183, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 122, in _execute
+    return await future
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 105, in run
+    result = function()
+sqlite3.OperationalError: no such column: username
+2025-07-11 17:31:38,769 - __main__ - ERROR - Не удалось получить информацию о чате для пользователя ID 7963375756: no such column: username
+2025-07-11 17:31:48,570 - asyncio - ERROR - Task exception was never retrieved
+future: <Task finished name='Task-51' coro=<Dispatcher._process_polling_updates() done, defined at C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py:410> exception=OperationalError('no such column: username')>
+Traceback (most recent call last):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 418, in _process_polling_updates
+    for responses in itertools.chain.from_iterable(await self.process_updates(updates, fast)):
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 236, in process_updates
+    return await asyncio.gather(*tasks)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\dispatcher.py", line 257, in process_update
+    return await self.message_handlers.notify(update.message)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiogram\dispatcher\handler.py", line 117, in notify
+    response = await handler_obj.handler(*args, **partial_data)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\bot.py", line 697, in cmd_start
+    await update_user_username(m.from_user.id, m.from_user.username)
+  File "C:\Users\s.baxromov\Desktop\Ticket_bot\db.py", line 268, in update_user_username
+    await db.execute(
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 183, in execute
+    cursor = await self._execute(self._conn.execute, sql, parameters)
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 122, in _execute
+    return await future
+  File "C:\Users\s.baxromov\AppData\Local\Programs\Python\Python310\lib\site-packages\aiosqlite\core.py", line 105, in run
+    result = function()
+sqlite3.OperationalError: no such column: username
+2025-07-11 17:36:43,733 - aiogram.dispatcher.dispatcher - INFO - Stop polling...
+2025-07-11 17:36:43,733 - aiogram - WARNING - Goodbye!
+2025-07-11 17:36:49,011 - aiogram - INFO - Bot: TestMB [@bankservicebot_bot]
+2025-07-11 17:36:49,231 - aiogram - WARNING - Updates were skipped successfully.
+2025-07-11 17:36:49,288 - __main__ - INFO - Заголовки добавлены в Excel файл.
+2025-07-11 17:36:49,306 - aiogram.dispatcher.dispatcher - INFO - Start polling.
+2025-07-11 17:37:51,303 - __main__ - INFO - Язык пользователя 5771942517 установлен на en.
+2025-07-11 17:38:02,114 - __main__ - INFO - Заявка R-4C85379A добавлена в Excel файл.
+2025-07-11 17:38:02,139 - __main__ - INFO - Новая заявка R-4C85379A создана пользователем 5771942517. Обновлен Excel.
+2025-07-11 17:43:33,966 - aiogram.dispatcher.dispatcher - INFO - Stop polling...
+2025-07-11 17:43:33,966 - aiogram - WARNING - Goodbye!
+2025-07-11 17:48:51,242 - __main__ - ERROR - BOT_TOKEN не установлен в переменных окружения. Убедитесь, что .env файл настроен корректно.
+2025-07-11 17:50:39,610 - __main__ - ERROR - BOT_TOKEN не установлен в переменных окружения. Убедитесь, что .env файл настроен корректно.
+2025-07-11 17:51:17,233 - __main__ - ERROR - BOT_TOKEN не установлен в переменных окружения. Убедитесь, что .env файл настроен корректно.
