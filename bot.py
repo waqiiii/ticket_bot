@@ -225,7 +225,7 @@ async def send_tickets_list(message_or_callback: types.Message | types.CallbackQ
         lang_code = (await dp.current_state(user=user_id).get_data()).get('language', 'ru')
         translated_status = LANGUAGES[lang_code].get(f'ticket_status_{status.lower()}', status)
         translated_priority = LANGUAGES[lang_code].get(f'ticket_priority_{priority.lower()}', priority)
-        translated_category = LANGUAGES[lang_code].get(f'ticket_category_{category.lower().replace(' ', '_')}', category)
+        translated_category = LANGUAGES[lang_code].get(f'ticket_category_{category.lower().replace(" ", "_")}', category)
 
         ticket_list_text += (
             f"<b>{await get_text(user_id, 'ticket_detail_title', code=code)}</b>\n"
@@ -308,7 +308,7 @@ async def tickets_pagination_handler(c: types.CallbackQuery, state: FSMContext):
         lang_code = (await dp.current_state(user=user_id).get_data()).get('language', 'ru')
         if status: filter_summary.append(f"{LANGUAGES[lang_code]['ticket_status'].split(':')[0]}: {LANGUAGES[lang_code].get(f'ticket_status_{status}', status)}")
         if priority: filter_summary.append(f"{LANGUAGES[lang_code]['ticket_priority'].split(':')[0]}: {LANGUAGES[lang_code].get(f'ticket_priority_{priority.lower()}', priority)}")
-        if category: filter_summary.append(f"{LANGUAGES[lang_code]['ticket_category'].split(':')[0]}: {LANGUAGES[lang_code].get(f'ticket_category_{category.lower().replace(' ', '_')}', category)}")
+        if category: filter_summary.append(LANGUAGES[lang_code].get(f'ticket_category_{category.lower().replace(" ", "_")}', category))
         if assigned_to_id is not None:
             if assigned_to_id == 0:
                 filter_summary.append(f"{LANGUAGES[lang_code]['ticket_assigned'].split(':')[0]}: {LANGUAGES[lang_code]['unassigned_tickets']}")
@@ -793,7 +793,7 @@ async def get_ticket_filters_keyboard(user_id: int, current_filters: dict = None
 
     # Категория
     category_text = current_filters.get('filter_category')
-    display_category = LANGUAGES['ru'].get(f'ticket_category_{category_text.lower().replace(' ', '_')}', category_text) if category_text else LANGUAGES['ru']['export_status_all']
+    display_category = LANGUAGES['ru'].get(f"ticket_category_{category_text.lower().replace(' ', '_')}", category_text) if category_text else LANGUAGES['ru']['export_status_all']
     kb.add(InlineKeyboardButton(f"{await get_text(user_id, 'ticket_category').split(':')[0]}: {display_category}", callback_data="filter_category_menu"))
 
     # Назначено
@@ -1017,7 +1017,10 @@ async def send_filtered_tickets(message_or_callback: types.Message | types.Callb
     if status: filter_summary.append(f"{LANGUAGES[lang_code]['ticket_status'].split(':')[0]}: {LANGUAGES[lang_code].get(f'ticket_status_{status.lower()}', status)}")
     if priority: filter_summary.append(f"{LANGUAGES[lang_code]['ticket_priority'].split(':')[0]}: {LANGUAGES[lang_code].get(f'ticket_priority_{priority.lower()}', priority)}")
     # Corrected line 909: Using double quotes for the f-string
-    if category: filter_summary.append(f"{LANGUAGES[lang_code]['ticket_category'].split(':')[0]}: {LANGUAGES[lang_code].get(f\"ticket_category_{category.lower().replace(' ', '_')}\", category)}")
+    if category:
+        category_key = f"ticket_category_{category.lower().replace(' ', '_')}"
+        category_value = LANGUAGES[lang_code].get(category_key, category)
+        filter_summary.append(f"{LANGUAGES[lang_code]['ticket_category'].split(':')[0]}: {category_value}")
     if assigned_to_id is not None:
         if assigned_to_id == 0:
             filter_summary.append(f"{LANGUAGES[lang_code]['ticket_assigned'].split(':')[0]}: {LANGUAGES[lang_code]['unassigned_tickets']}")
@@ -1060,7 +1063,7 @@ async def show_ticket_detail(c: types.CallbackQuery):
         await get_text(user_id, "ticket_status", status=LANGUAGES[(await dp.current_state(user=user_id).get_data()).get('language', 'ru')].get(f'ticket_status_{status.lower()}', status)),
         await get_text(user_id, "ticket_user", user=(f"@{username}" if username else f"ID {ticket_user_id}")),
         await get_text(user_id, "ticket_priority", priority=LANGUAGES[(await dp.current_state(user=user_id).get_data()).get('language', 'ru')].get(f'ticket_priority_{priority.lower()}', priority)),
-        await get_text(user_id, "ticket_category", category=LANGUAGES[(await dp.current_state(user=user_id).get_data()).get('language', 'ru')].get(f'ticket_category_{category.lower().replace(' ', '_')}', category))
+        await get_text(user_id, "ticket_category", category=LANGUAGES[(await dp.current_state(user=user_id).get_data()).get('language', 'ru')].get(f'ticket_category_{category.lower().replace(" ", "_")}', category))
     ]
     if assigned_to_id:
         try:
